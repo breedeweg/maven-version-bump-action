@@ -21,6 +21,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
 
     steps:
     - name: Checkout Latest Commit
@@ -28,7 +31,7 @@ jobs:
 
     - name: Bump Version
       id: bump
-      uses: nnichols/maven-version-bump-action@v5
+      uses: breedeweg/maven-version-bump-action@wip
       with:
         github-token: ${{ secrets.github_token }}
 
@@ -50,6 +53,6 @@ jobs:
 
 ## Licensing
 
-Copyright © 2021-2022 [Nick Nichols](https://nnichols.github.io/)
+Copyright © 2021-2024 [Nick Nichols](https://nnichols.github.io/)
 
 Distributed under the [MIT License](https://github.com/nnichols/maven-version-bump-action/blob/master/LICENSE)
