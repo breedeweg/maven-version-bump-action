@@ -24,11 +24,11 @@ jobs:
 
     steps:
     - name: Checkout Latest Commit
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Bump Version
       id: bump
-      uses: nnichols/maven-version-bump-action@v3
+      uses: nnichols/maven-version-bump-action@v5
       with:
         github-token: ${{ secrets.github_token }}
 
